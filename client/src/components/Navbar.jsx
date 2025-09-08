@@ -19,6 +19,7 @@ const Navbar = ({ auth, handleLogout }) => {
                     <h1 className="text-3xl font-bold text-primary font-mono tracking-tight">Ecommece</h1>
                     <div className="flex items-center gap-3">
                         {role == '1' && <>
+                            <Link to="/items/items-list" className="flex hover:bg-slate-200 p-3 b-rad">Items</Link>
                             <Link to="/items/cart" className="flex hover:bg-slate-200 p-3 b-rad">Cart</Link>
                         </>}
                         {role == '2' && <>
