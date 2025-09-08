@@ -58,7 +58,7 @@ const Login = ({ handleLogin }) => {
                 <form className='flex flex-col gap-3' onSubmit={handleSubmit}>
                     <label className="input input-bordered flex items-center gap-2">
                         <IdCard /> User Type
-                        <select className="select select-primary w-full max-w-xs border-gray-300" onChange={(e) => setRole(e.target.value)}>
+                        <select className="select select-primary w-full max-w-xs border-gray-300" onChange={(e) => setRole(e.target.value)} required>
                             <option selected={role == 0} disabled value={null}>Select User</option>
                             <option selected={role == 1} value={1}>User</option>
                             <option selected={role == 2} value={2}>ShopOwner</option>
@@ -67,11 +67,11 @@ const Login = ({ handleLogin }) => {
                     </label>
                     <label className="input input-bordered flex items-center gap-2">
                         <Mail /> Email:
-                        <input type="text" className="grow" placeholder="Enter Email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                        <input type="email" className="grow" placeholder="Enter Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
                     </label>
                     <label className="input input-bordered flex items-center gap-2">
                         <Key /> Password:
-                        <input type="password" className="grow" placeholder="Enter Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                        <input type="password" className="grow" placeholder="Enter Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
                     </label>
                     <div className='mt-5'>Submit directly for dummy Customer login</div>
                     <button type='submit' className="btn btn-accent">Submit</button>

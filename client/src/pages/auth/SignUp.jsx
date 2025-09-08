@@ -54,7 +54,7 @@ const SignUp = ({ handleLogin }) => {
                 <form className='flex flex-col gap-3' onSubmit={handleSignUp}>
                     <label className="input input-bordered flex items-center gap-2">
                         <IdCard /> User Role
-                        <select className="select select-primary w-full max-w-xs border-gray-300" onChange={(e) => setRole(e.target.value)}>
+                        <select className="select select-primary w-full max-w-xs border-gray-300" onChange={(e) => setRole(e.target.value)} required>
                             <option selected disabled value={0}>Select User</option>
                             <option value={1}>User</option>
                             <option value={2}>ShopOwner</option>
@@ -63,15 +63,15 @@ const SignUp = ({ handleLogin }) => {
                     </label>
                     <label className="input input-bordered flex items-center gap-2">
                         <User /> Name:
-                        <input type="text" className="grow" placeholder="Enter Name" value={name} onChange={(e) => setName(e.target.value)} />
+                        <input type="text" className="grow" placeholder="Enter Name" value={name} onChange={(e) => setName(e.target.value)} required />
                     </label>
                     <label className="input input-bordered flex items-center gap-2">
                         <Mail /> Email:
-                        <input type="text" className="grow" placeholder="Enter Email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                        <input type="email" className="grow" placeholder="Enter Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
                     </label>
                     <label className="input input-bordered flex items-center gap-2">
                         <Key /> Password:
-                        <input type="password" className="grow" placeholder="Enter Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                        <input type="password" className="grow" placeholder="Enter Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
                     </label>
                     <button type='submit' className="btn btn-accent">Submit</button>
                 </form>
