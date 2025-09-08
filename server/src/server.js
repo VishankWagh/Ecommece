@@ -18,7 +18,7 @@ const PORT = process.env.PORT || 5000;
 // middleware
 app.use(
     cors({
-        origin: "http://localhost:5173"
+        origin: "https://ecommece-vsw.vercel.app"
     })
 );
 app.use(express.json());
